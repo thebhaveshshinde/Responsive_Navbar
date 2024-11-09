@@ -80,6 +80,11 @@
         
        }
 
+       
+    .img.img_isopen{
+        display: none;
+    }
+
     .nav-links{
         display: none;
    
@@ -89,18 +94,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        background-color: red;
+        background-color: rgb(213, 206, 206);
         height: 100vh;
-        width: 100vw;
+        width: 70vw;
+        position: absolute;
+        right: 0%;
     }
 
-    .img.img_isopen{
-        display: none;
-    }
 
     .cross_logo_container{
-        right: 4px;
-        top: 4px;
+        right: 18px;
+        top: 14px;
     }
 
    .cross_logo_container img{
@@ -110,4 +114,9 @@
     .img2.cross_show{
         display: block;
     }
+
+    .main_container.make_blur{
+        filter: blur(4px);
+    }
+
 }

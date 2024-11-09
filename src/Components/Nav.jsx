@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom"
 import "../Style.css"
-import { useState } from "react"
+import {  useContext } from "react"
+import { MyContext } from './MyContext';
 
 function Nav() {
-    const [isopen , setisopen]=useState(false)
+    // const [isopen , setisopen]=useState(false)
+
+    const { isopen , setisopen} = useContext(MyContext);
+    
 
     const handle_logo_click = () => {
         setisopen(!isopen)
@@ -12,6 +16,9 @@ function Nav() {
     const handle = () =>{
         setisopen(false)
     }
+    
+
+
   return (
     <>
       <nav className="navbar">
@@ -28,6 +35,9 @@ function Nav() {
           <img className={`img2 ${isopen?'cross_show':''}`} onClick={handle} src="/download3.png" alt="cross Logo" />
         </div>
       </nav>
+
+
+    
     </>
   )
 }
